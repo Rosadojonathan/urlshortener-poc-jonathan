@@ -9,7 +9,7 @@ const shortUrl = require('./models/shortUrl');
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/shortUrls');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://stupiduser:stupidpassword@ds113586.mlab.com:13586/urlshortener-jonathan');
 
 app.use(express.static(__dirname + '/public'));
 
@@ -24,7 +24,7 @@ app.get('/new/:urlToShorten(*)', (req,res)=>{
 			originalUrl: urlToShorten,
 			shorterUrl: short
 		});
- 
+
 		data.save(err=>{
 			if(err){
 				return res.send('Error with database' + err);
