@@ -9,7 +9,7 @@ const shortUrl = require('./models/shortUrl');
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://stupiduser:stupidpassword@ds113586.mlab.com:13586/urlshortener-jonathan');
+mongoose.connect(process.env.MONGODB_URI);
 
 app.use(express.static(__dirname + '/public'));
 
