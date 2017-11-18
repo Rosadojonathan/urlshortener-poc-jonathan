@@ -24,7 +24,7 @@ app.get('/new/:urlToShorten(*)', (req,res)=>{
 			originalUrl: urlToShorten,
 			shorterUrl: short
 		});
-
+ 
 		data.save(err=>{
 			if(err){
 				return res.send('Error with database' + err);
