@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shortUrlApp">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>URL SHORTENER</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+	<script src="/js/app.js"></script>
+</head>
+
+<body>
+<div class="text-center">
+	<section ng-controller='shortAppCtrl' style='top:50%'>
+
+<input placeholder="Shorten URL?" ng-model="urlToShorten">
+<a  class="btn btn-primary"ng-href='/new/{{urlToShorten}}'>Get Shortened URL</a>
+</section>
+</div>
+</body>
+
+</html>
